@@ -1,0 +1,17 @@
+app to_do_list {
+  wasp: {
+    version: "^0.11.2"
+  },
+  title: "to_do_list"
+}
+
+route RootRoute { path: "/", to: MainPage }
+route HelpRoute { path: "/help/:name", to: HelpPage }
+
+page MainPage {
+  component: import Main from "@client/MainPage.jsx"
+}
+
+page HelpPage {
+  component: import Help from "@client/HelpPage.jsx"
+}
